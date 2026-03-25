@@ -17,13 +17,13 @@ This frontend acts as a "dumb terminal" — it relies entirely on the primary **
 ```mermaid
 graph TD
     subgraph MainRepo ["PredSX (Backend on Port 8080)"]
-        style MainRepo fill:#1e293b,stroke:#3b82f6,stroke-width:2px,color:#fff
+        style MainRepo fill:#1e293b,stroke:#3b82f6,stroke-width:1px,color:#fff
         A[("Apache Kafka")] -->|Normalized Events| B["Go API Gateway"]
         B -->|Broadcast Hub| C(("WebSocket Port 8080"))
     end
 
     subgraph FrontendRepo ["PredSX-Stat (Frontend on Port 3000)"]
-        style FrontendRepo fill:#1e293b,stroke:#f59e0b,stroke-width:2px,color:#fff
+        style FrontendRepo fill:#1e293b,stroke:#f59e0b,stroke-width:1px,color:#fff
         D["src/services/websocket.ts"]
         E[("Zustand State Stores")]
         F["React Components / UI"]
