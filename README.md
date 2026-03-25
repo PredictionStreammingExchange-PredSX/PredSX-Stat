@@ -15,7 +15,7 @@
 This frontend acts as a "dumb terminal" — it relies entirely on the primary **PredSX** backend repository to supply processed data. Here is exactly how the frontend connects to the main repo's data streams:
 
 ```mermaid
-graph TD
+graph LR
     subgraph MainRepo ["PredSX (Backend on Port 8080)"]
         style MainRepo fill:#1e293b,stroke:#3b82f6,stroke-width:1px,color:#fff
         A[("Apache Kafka")] -->|Normalized Events| B["Go API Gateway"]
